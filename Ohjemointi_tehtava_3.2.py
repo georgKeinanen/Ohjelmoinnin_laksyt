@@ -1,0 +1,19 @@
+#Ohjemointi tehtava 3.2: Hyttiluokat
+
+#En usko että tämä ohjelma vaati kommenteja liityen sen toimintaan...
+hyttiluokka=input("Anna hyttiluokka (LUX, A, B tai C): ")
+
+if hyttiluokka=="LUX":
+    print("LUX on parvekkeellinen hytti yläkannella.")
+
+elif hyttiluokka =="A":
+    print("A on ikkunallinen hytti autokannen yläpuolella.")
+
+elif hyttiluokka =="B":
+    print("B on ikkunaton hytti autokannen yläpuolella.")
+
+elif hyttiluokka =="C":
+    print("C on ikkunaton hytti autokannen alapuolella.")
+
+else:
+    print("Virheellinen hyttiluokka")
