@@ -26,8 +26,6 @@ if biolog_gender == "mies":
 elif biolog_gender== "nainen":
     # Naisen normaali hemoglobiiniarvo on välillä 117-175 g/l.
 
-    # Samoista syistä tästäkin ehtolauseesta löytyy metodi lower
-
     if hemogoblin >= 117 and hemogoblin <= 175:
         print("Hemoglobiin arvosi on normaali.")
         print(f"Hemoglobiini arvosi: {hemogoblin} g/l")
