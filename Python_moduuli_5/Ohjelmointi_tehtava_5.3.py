@@ -9,7 +9,7 @@ for jakaja in range(1,luku+1):
         jaollisuus.append(jakaja)
         #Tallentaa listaan luvut joilla antamasi luku on jaollinen...
 
-if len(jaollisuus)==2:
+if len(jaollisuus)==2 or len(jaollisuus)==1:
 
     print(f"Antamasi luku on alkuluku. Antamasi luku: {luku}")
 
