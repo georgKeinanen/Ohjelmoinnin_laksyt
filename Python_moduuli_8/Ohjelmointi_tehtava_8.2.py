@@ -8,7 +8,7 @@ yhteys = mysql.connector.connect(
          database='flight_game',
          user='root',
          password='Rotting_dir?1984',
-         autocommit=True
+         autocommit=False
          )
 #Kyselyn määritys
 maakoodi = input("Anna maakoodi: ")
@@ -21,4 +21,6 @@ DBkursori.execute(sql)
 tulos=DBkursori.fetchall()
 for rivi in tulos:
     print(rivi)
+
+
 
