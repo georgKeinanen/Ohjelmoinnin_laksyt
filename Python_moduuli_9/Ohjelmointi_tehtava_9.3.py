@@ -42,4 +42,4 @@ auto1=Auto("ABC-123",142, 2000)
 print(f"Auton Rekisteri tunnus {auto1.rekisteri}, huippunopeus: {auto1.max_nopeus}km/h, kuljettumatka: {auto1.kuljettu}km ja tämän hetkinen nopeus: {auto1.nopeus}km/h")
 Auto.kulje(auto1,60, 1.5)
 
-print(f"Rekisterillä {auto1.rekisteri} varustetun auton tämän hetkinen nopeus: {auto1.nopeus}km/h ja kuljettu matka {auto1.kuljettu}km")
+print(f"Rekisterillä {auto1.rekisteri} varustetun auton tämän hetkinen nopeus: {auto1.nopeus}km/h ja kuljettu: matka {auto1.kuljettu}km")
