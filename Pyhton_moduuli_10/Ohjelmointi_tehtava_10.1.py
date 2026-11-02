@@ -18,6 +18,7 @@ class Hissi:
             self.kerros_ylös()
         while self.kerros>kerros and self.kerros>self.alin:
             self.kerros_alas()
+        print(f"Siirryttiin kerrokseen {self.kerros}")
 
 hissi=Hissi(1, 10)
 hissi.siirry_kerrokseen(5)

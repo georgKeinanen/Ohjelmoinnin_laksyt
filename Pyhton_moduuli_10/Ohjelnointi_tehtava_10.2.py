@@ -19,3 +19,12 @@ class Hissi:
             self.kerros_ylös()
         while self.kerros>kerros and self.kerros>self.alin:
             self.kerros_alas()
+
+class Talo:
+    def __init__(self, ylin, alin,hissien_määrä):
+        self.hissien_määrä=hissien_määrä
+        self.ylin=ylin
+        self.alin=alin
+        self.hissit=[]
+
+    def aja_hissiä(self, hissi_nro, kerros):

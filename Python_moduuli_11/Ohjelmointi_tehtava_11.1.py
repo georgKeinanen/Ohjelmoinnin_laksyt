@@ -28,6 +28,7 @@ class Lehti(Julkaisu):
         print("")
 
 #Kirja("Homestuck", 8000, "Andrew Hussie")
+#Homestuck, also known as the internet bible just because of it page count.
 
 julkaisut=[]
 #julkaisut.append(Kirja("Homestuck", 8000, "Andrew Hussie"))

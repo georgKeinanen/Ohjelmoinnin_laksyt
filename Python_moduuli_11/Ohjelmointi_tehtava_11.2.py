@@ -32,7 +32,7 @@ class Polttomoootri_auto(Auto):
             self.kuljettu += self.nopeus * tunnit
         print(f"kuljettiin nopeudella: {self.nopeus} km/h {tunnit} tuntia")
 
-class Sahko_auto(Auto):
+class Sähko_auto(Auto):
     def __init__ (self,rekisteri_nro, huippu_nopeus, akku_kapasiteetti, nopeus=0, kuljettu_matka=0):
         super().__init__(rekisteri_nro, huippu_nopeus)
         self.nopeus=nopeus
@@ -56,9 +56,9 @@ class Sahko_auto(Auto):
             self.kuljettu += self.nopeus * tunnit
         print(f"kuljettiin nopeudella: {self.nopeus} km/h {tunnit} tuntia")
 
-auto1=Sahko_auto("ABC-15", 180, 52.5)
+auto1=Sähko_auto("ABC-15", 180, 52.5)
 auto2=Polttomoootri_auto("ACD-123", 165, 32.3)
-auto1.kulje(nopeus=179, tunnit=3)
+auto1.kulje(179, 3)
 auto1.tulosta_tiedot()
-auto2.kulje(nopeus=197, tunnit=3)
+auto2.kulje(197, 3)
 auto2.tulosta_tiedot()
