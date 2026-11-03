@@ -1,0 +1,56 @@
+#Ohjelmointi tehtävä 13.2: Lentoasema tietojen haku taustapalvelun avulla
+#Linkki tasuta palveluun jos sitä ei ole jo avattu :]
+#http://127.0.0.1:3000/kentt%C3%A4/EFHK
+
+from flask import Flask, request
+import mysql.connector
+
+yhteys = mysql.connector.connect(
+    host='127.0.0.1',
+    port=3306,
+    database='flight_game',
+    user='root',
+    password='Rotting_dir?1984',
+    autocommit=False
+)
+
+app = Flask(__name__)
+@app.route('/kenttä/<icao>')
+def kenttä(icao):
+    DBkursori = yhteys.cursor()
+    sql_kysely=f"select name, municipality from airport where ident='{icao}';"
+    DBkursori.execute(sql_kysely)
+    tulos=DBkursori.fetchall()
+
+    try:
+        vastaus={
+            "ICAO": icao,
+            "Name": tulos[0][0],
+            "Municipality": [0][1]
+        }
+        return str(vastaus)
+    except IndexError:
+        vastaus = {
+            "status": 400,
+            "teksti": "Etsimääsi ICAO-koodia ei ole olemassa"
+        }
+        return str(vastaus)
+
+app.run(use_reloader=True, host='127.0.0.1', port=3000)
+
+#              ####
+#           #####
+#   ##################
+########################
+##########################
+##########################     <----The tree
+######################
+#   ############
+#     #########   ###
+#        ##########
+#  ###########
+#  ##########
+#  #####
+#  ######
+##########
+#Well, there is an ICAO-code behind the tree.
