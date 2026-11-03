@@ -22,17 +22,18 @@ def kenttä(icao):
     DBkursori.execute(sql_kysely)
     tulos=DBkursori.fetchall()
 
-    try:
-        vastaus={
-            "ICAO": icao,
-            "Name": tulos[0][0],
-            "Municipality": [0][1]
-        }
-        return str(vastaus)
-    except IndexError:
+    if len(tulos)==0:
         vastaus = {
             "status": 400,
             "teksti": "Etsimääsi ICAO-koodia ei ole olemassa"
+        }
+        return str(vastaus)
+    else:
+
+        vastaus = {
+        "ICAO": icao,
+        "Name": tulos[0][0],
+        "Municipality": tulos[0][1]
         }
         return str(vastaus)
 
@@ -44,7 +45,7 @@ app.run(use_reloader=True, host='127.0.0.1', port=3000)
 #      ____.--|        ___     |
 #     |    | |        |___|    |____
 #     | ___| `-----                 |
-#_____||___|__   _|            ____ |
+#_____||___|__   _|            ____ |  <----- This tree is not my creation, it just grows here...
 #|       ||__| _|_|          /|    |*
 #|       |____|     .--------```|`|`
 #|            |____ |--._____.--* |
@@ -55,4 +56,4 @@ app.run(use_reloader=True, host='127.0.0.1', port=3000)
 #|            /_-_-_-_-_\         |
 #|____                        ____|
 #     |_______________________|
-
+#Well there was an ICAO-code here
