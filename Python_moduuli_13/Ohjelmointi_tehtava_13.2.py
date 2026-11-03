@@ -28,8 +28,8 @@ def kenttä(icao):
             "teksti": "Etsimääsi ICAO-koodia ei ole olemassa"
         }
         return str(vastaus)
+        
     else:
-
         vastaus = {
         "ICAO": icao,
         "Name": tulos[0][0],
